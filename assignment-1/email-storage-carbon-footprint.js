@@ -1,4 +1,4 @@
-const CARBON_EMISSION_PER_KG = {
+const CARBON_EMISSION_KG_PER_MB= {
     INBOX: 0.02,
     SENT: 0.05,
     SPAM: 0.03
@@ -20,12 +20,12 @@ class EmailInfo {
     }
 }
 
-function calculateCarbonAmount(emailFolderSizeInKG, category) {
-    const emissionRate = CARBON_EMISSION_PER_KG[category];
+function calculateCarbonAmount(emailFolderSizeInMB, category) {
+    const emissionRate = CARBON_EMISSION_KG_PER_MB[category];
     if (emissionRate === undefined) {
         throw new Error(`Invalid email category: ${category}`);
     }
-    return emissionRate * emailFolderSizeInKG;
+    return emissionRate * emailFolderSizeInMB;
 }
 
 function printCarbonFootprint(emailId, emailSource, inboxCarbon, sentCarbon, spamCarbon) {
