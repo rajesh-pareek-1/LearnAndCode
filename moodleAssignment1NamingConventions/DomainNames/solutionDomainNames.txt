@@ -1,0 +1,12 @@
+Solution Domain (Technical terms):
+
+HttpStatusCode
+DocumentPickerResponse
+generatePdf
+addScannedImages
+scanDocument
+finishLoad
+showToast
+convertToJpeg
+isUnsupportedImageFormat
+AppPaths
