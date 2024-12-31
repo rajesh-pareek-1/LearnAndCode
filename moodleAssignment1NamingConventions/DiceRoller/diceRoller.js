@@ -5,7 +5,7 @@ function rollDice(diceSides) {
 }
 
 function main() {
-    const sides = 6;
+    const diceSides = 6;
     const readlineInterface = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -14,7 +14,7 @@ function main() {
     function askQuestion() {
         readlineInterface.question("Ready to roll? Enter Q to Quit: ", (userInput) => {
             if (userInput.toLowerCase() !== "q") {
-                const result = rollDice(sides);
+                const result = rollDice(diceSides);
                 console.log(`You have rolled a ${result}`);
                 askQuestion();
             } else {
