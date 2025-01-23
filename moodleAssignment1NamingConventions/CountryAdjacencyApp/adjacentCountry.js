@@ -3,7 +3,7 @@ const readline = require('readline');
 const path = require('path');
 
 const ERROR_INVALID_CODE = "Invalid Country Code or No Data Available.";
-const COUNTRY_DATA_FILE = path.join(__dirname, 'countryData.json');
+const COUNTRY_DATA_FILE = path.join(__dirname, 'countryAdjacencyMap.json');
 
 function loadCountryData(filePath) {
     try {
@@ -15,11 +15,11 @@ function loadCountryData(filePath) {
     }
 }
 
-function processUserInput(countryCode, countryData) {
+function processUserInput(countryCode, countryAdjacencyMap) {
     countryCode = countryCode.toUpperCase();
 
-    if (countryData[countryCode]) {
-        const adjacentCountries = countryData[countryCode];
+    if (countryAdjacencyMap[countryCode]) {
+        const adjacentCountries = countryAdjacencyMap[countryCode];
         console.log(`Adjacent countries to ${countryCode}: ${adjacentCountries.join(', ')}`);
     } else {
         console.log(ERROR_INVALID_CODE);
@@ -32,10 +32,10 @@ const readLineInterface = readline.createInterface({
 });
 
 function main() {
-    const countryData = loadCountryData(COUNTRY_DATA_FILE);
+    const countryAdjacencyMap = loadCountryData(COUNTRY_DATA_FILE);
 
     readLineInterface.question("Enter a Country Code (e.g., IN, US, NZ): ", (countryCode) => {
-        processUserInput(countryCode, countryData);
+        processUserInput(countryCode, countryAdjacencyMap);
         readLineInterface.close();
     });
 }

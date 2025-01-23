@@ -1,31 +1,31 @@
-const readline = require('readline');
+const inputHandler = require('readline');
 
 function getNumberOfDigits(number) {
-    let numDigits = 0;
+    let digitCount = 0;
     let currentNumber = number;
 
     while (currentNumber > 0) {
-        numDigits++;
+        digitCount++;
         currentNumber = Math.floor(currentNumber / 10);
     }
-    return numDigits;
+    return digitCount;
 }
 
 function isArmstrongNumber(number) {
     let sumOfPowers = 0;
-    const numDigits = getNumberOfDigits(number);
+    const digitCount = getNumberOfDigits(number);
     let currentNumber = number;
 
     while (currentNumber > 0) {
         const digit = currentNumber % 10;
-        sumOfPowers += Math.pow(digit, numDigits);
+        sumOfPowers += Math.pow(digit, digitCount);
         currentNumber = Math.floor(currentNumber / 10);
     }
 
     return sumOfPowers === number;
 }
 
-const readlineInterface = readline.createInterface({
+const readlineInterface = inputHandler.createInterface({
     input: process.stdin,
     output: process.stdout
 });

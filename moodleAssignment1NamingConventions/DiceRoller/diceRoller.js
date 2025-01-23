@@ -11,19 +11,19 @@ function main() {
         output: process.stdout
     });
 
-    function askQuestion() {
+    function handleDiceRollPrompt() {
         readlineInterface.question("Ready to roll? Enter Q to Quit: ", (userInput) => {
             if (userInput.toLowerCase() !== "q") {
                 const result = rollDice(diceSides);
                 console.log(`You have rolled a ${result}`);
-                askQuestion();
+                handleDiceRollPrompt();
             } else {
                 readlineInterface.close();
             }
         });
     }
 
-    askQuestion();
+    handleDiceRollPrompt();
 }
 
 main();
