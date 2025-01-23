@@ -1,0 +1,13 @@
+{
+    "IN": ["China", "Pakistan", "Nepal", "Bangladesh", "Bhutan", "Myanmar"],
+    "US": ["Canada", "Mexico"],
+    "NZ": ["Australia"],
+    "CA": ["United States"],
+    "AU": ["New Zealand"],
+    "GB": ["France", "Belgium", "Netherlands", "Germany"],
+    "FR": ["Belgium", "Luxembourg", "Germany", "Switzerland", "Italy", "Monaco", "Andorra", "Spain"],
+    "DE": ["Denmark", "Poland", "Czech Republic", "Austria", "Switzerland", "France", "Luxembourg", "Belgium", "Netherlands"],
+    "RU": ["Norway", "Finland", "Estonia", "Latvia", "Lithuania", "Poland", "Ukraine", "Georgia", "Kazakhstan", "China", "Mongolia"],
+    "CN": ["India", "Pakistan", "Nepal", "Bhutan", "Myanmar", "Russia", "Kazakhstan", "Kyrgyzstan", "Tajikistan", "Afghanistan"],
+    "BR": ["Argentina", "Bolivia", "Colombia", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"]
+}

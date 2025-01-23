@@ -1,0 +1,12 @@
+Problem Domain (Business-specific terms)
+
+BillOfLadingNumber
+DriverLoadID
+ShipmentID
+DriverLoadCargoDetails
+ShipmentLocations
+Attachments
+EstimatedDeliveryTime
+Breakdown
+HandleReportBreakdownClick
+UpdatedLoad
